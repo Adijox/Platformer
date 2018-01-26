@@ -9,11 +9,11 @@ function draw() {
   ellipse(mouseX, mouseY, 10, 10);
 }
 
-/* 
+/*
 
 Something new I discovered and that I find nice
-Sorry but the dimension is the one from my computer screen 
-
+Sorry but the dimension is the one from my computer screen
+setInterval(draw, 1);
 var spot = {
 	x: 100,
 	y: 50
@@ -40,4 +40,3 @@ function draw() {
 	noStroke();
 	ellipse(spot.x, spot.y, 24, 24);
 }
-
