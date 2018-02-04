@@ -14,7 +14,7 @@ function Player(x,y) {
   //Pour les forces verticales
   this.applyForce = function(f) {
     this.acc = f;
-    console.log(f);
+    // console.log(f);
   }
 
 //Pour le changelent de vitesse latérale instaéntane
