@@ -12,6 +12,6 @@ function Platform(x,y,width,col,index) {
     fill(this.col);
 //20:valeur de la courbure des angles
 //10:largeur arbitraire
-    rect(this.x, this.y, this.width, this.height, 20);
+    rect(this.x, this.y, this.width, this.height, 30);
   }
 }
