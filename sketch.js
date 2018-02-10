@@ -5,12 +5,12 @@ const gravity = 0.2;
 // de code PENDANT une durée précise, et plus après (situation très courante dans le game design). C'est pourquoi l'objet Timer admet un paramètre 'action' qui est une fonction
 let timers = [];
 function setup() {
-  createCanvas(450, 800);
+  createCanvas(180, 320);
   background(51);
   rectMode(CENTER);
   player = new Player(width/2, 30);
   for(let i =0; i<10; i++) {
-    platforms.push(new Platform(random(0, width), random(0, height), 70, 'green', i));
+    platforms.push(new Platform(random(0, width), random(0, height), 50, 'green', i));
   }
 }
 

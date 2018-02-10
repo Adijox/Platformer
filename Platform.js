@@ -2,7 +2,7 @@ function Platform(x,y,width,col,index) {
   this.x = x;
   this.y = y;
   this.width = width;
-  this.height = 10;
+  this.height = 7;
   this.col = col;
   this.index = index;
 
