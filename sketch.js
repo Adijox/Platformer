@@ -11,7 +11,7 @@ function setup() {
   createCanvas(480, 720);
   background(51);
   rectMode(CENTER);
-  pixelDensity(6);
+  pixelDensity(3);
   frameRate(fps);
   noStroke();
 
