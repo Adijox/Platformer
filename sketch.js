@@ -11,12 +11,13 @@ function setup() {
   createCanvas(480, 720);
   background(51);
   rectMode(CENTER);
-  pixelDensity(3);
+  pixelDensity(6);
   frameRate(fps);
+  noStroke();
 
-  player = new Player(width/2, 30);
+  player = new Player(width/2, 30, round(random(0, 1)));
   for(let i =0; i<10; i++) {
-    platforms.push(new Platform(random(0, width), random(0, height), 50, 'green', i));
+    platforms.push(new Platform(random(0, width), random(0, height), 50, round(random(0, 1)), i));
   }
 }
 
@@ -24,6 +25,8 @@ function draw() {
   background(51);
   fill(255);
   player.applyForce(createVector(0, gravity));
+//On actualise le joeur à ce stade là pour que la vérification de collision/GoThough travaillent avec la version la plus récente des coords
+  player.update();
 
 
   for(let i=0; i<platforms.length;i++) {
@@ -33,7 +36,7 @@ function draw() {
     if(GoThrough(i)) {
 //On téléporte la balle vers le haut
         player.vel.mult(0);
-        player.pos.add(createVector(0, -1*(player.pos.y - player.prevy)));
+        player.applyChange(createVector(0, -1*(player.pos.y - player.prevy)/2));
       console.log('WENT THROUGH');
     }
     if(UpCollision(i)) {
@@ -64,7 +67,6 @@ for(let i = 0; i < 10; i++) {
   for(plat of platforms) {
     plat.display();
   }
-  player.update();
   player.display();
 }
 
